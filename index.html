@@ -6,80 +6,33 @@
 
 <style>
     /* GLOBAL */
+    :root {
+        --bg: #050607;
+        --panel: #101114;
+        --panel-border: #262626;
+        --text: #e5e5e5;
+        --muted: #a0a0a0;
+        --gold: #c9a96a;
+        --gold-soft: #b8965a;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         padding: 0;
-        background: #0b0b0b;
-        color: #e8e8e8;
+        background: var(--bg);
+        color: var(--text);
         font-family: Arial, sans-serif;
         line-height: 1.7;
     }
 
-    :root {
-        --gold: #c7a86a;
-        --gold-soft: #b9975a;
-        --panel: #111;
-        --panel-border: #1c1c1c;
-    }
-
-    /* CENTERED WRAPPER */
-    .wrapper {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 22px;
-    }
-
-    /* HEADER */
-    .header {
-        text-align: center;
-        padding: 80px 20px 60px;
-        border-bottom: 1px solid var(--panel-border);
-        background: linear-gradient(180deg, #151515, #0b0b0b);
-    }
-
-    .header h1 {
-        font-size: 56px;
-        margin: 0;
-        letter-spacing: 3px;
-        color: var(--gold);
-        font-weight: 700;
-    }
-
-    .header .tagline {
-        margin-top: 14px;
-        font-size: 22px;
-        color: #d0d0d0;
-    }
-
-    /* SECTION BLOCKS */
-    .section {
-        background: var(--panel);
-        border: 1px solid var(--panel-border);
-        padding: 28px 30px;
-        margin-top: 40px;
-        border-radius: 6px;
-        box-shadow: 0 0 22px rgba(0,0,0,0.35);
-    }
-
-    .section h2 {
-        margin: 0 0 14px 0;
-        font-size: 24px;
-        color: var(--gold);
-        letter-spacing: 1px;
-        font-weight: 600;
-    }
-
-    .section p {
-        margin: 0;
-        font-size: 18px;
-        color: #dcdcdc;
-    }
-
-    /* LINKS */
     a {
         color: var(--gold);
-        font-weight: 600;
         text-decoration: none;
+        font-weight: 600;
     }
 
     a:hover {
@@ -87,42 +40,235 @@
         text-decoration: underline;
     }
 
+    /* PAGE WRAPPER */
+    .page {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 18px 60px;
+    }
+
+    /* BRAND HEADER */
+    .brand {
+        border-bottom: 1px solid var(--panel-border);
+        padding-bottom: 26px;
+        margin-bottom: 30px;
+    }
+
+    .brand-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 6px;
+    }
+
+    .brand-title {
+        font-size: 40px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .brand-tagline {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #d0d0d0;
+    }
+
+    .brand-meta {
+        margin-top: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* LAYOUT: MAIN GRID */
+    .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+        gap: 22px;
+    }
+
+    @media (max-width: 800px) {
+        .layout {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* PANELS */
+    .panel {
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        border-radius: 6px;
+        padding: 20px 22px;
+        margin-bottom: 18px;
+    }
+
+    .panel-header {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        margin-bottom: 6px;
+    }
+
+    .panel-title {
+        font-size: 20px;
+        margin: 0 0 8px 0;
+        color: var(--gold);
+        font-weight: 600;
+    }
+
+    .panel p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--text);
+    }
+
+    .panel p + p {
+        margin-top: 6px;
+    }
+
+    .muted {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
     ul {
-        margin: 10px 0 0 0;
-        padding-left: 20px;
+        margin: 6px 0 0 0;
+        padding-left: 18px;
+        font-size: 14px;
     }
 
     li {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
-</style>
 
+    .pill {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--gold-soft);
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-left: 6px;
+    }
+
+    /* SECTION GROUP TITLES */
+    .group-title {
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 26px 0 8px 2px;
+    }
+
+</style>
 </head>
 
 <body>
 
-<div class="header">
-    <h1>ARCHONOMY</h1>
-    <p class="tagline"><strong>The Discipline of Identity Integrity</strong></p>
-</div>
+<div class="page">
 
-<div class="wrapper">
+    <!-- BRAND / TOP -->
+    <header class="brand">
+        <div class="brand-label">Canonical Discipline</div>
+        <h1 class="brand-title">ARCHONOMY</h1>
+        <p class="brand-tagline"><strong>The Discipline of Identity Integrity</strong></p>
+        <div class="brand-meta">Specification · Version 0.1 (Draft)</div>
+    </header>
 
-    <div class="section">
-        <h2>What ARCHONOMY Is</h2>
-        <p>ARCHONOMY is the discipline that restores, stabilizes, and protects mechanisms — ensuring they remain themselves across time, operators, and conditions.</p>
-    </div>
+    <div class="layout">
 
-    <div class="section">
-        <h2>Core Documents</h2>
-        <ul>
-            <li><a href="function-document.html">Function Document</a></li>
-        </ul>
-    </div>
+        <!-- LEFT COLUMN: CORE CONCEPT & DOCUMENTS -->
+        <div>
 
-    <div class="section">
-        <h2>Purpose of This Site</h2>
-        <p>This site houses the canonical documents, structures, and specifications of the ARCHONOMY discipline.</p>
+            <div class="panel">
+                <div class="panel-header">Foundation</div>
+                <h2 class="panel-title">What ARCHONOMY Is</h2>
+                <p>ARCHONOMY is the discipline that restores, stabilizes, and protects mechanisms — ensuring they remain themselves across time, operators, and conditions.</p>
+                <p class="muted">Identity integrity is treated as a first-class property of any mechanism, not an incidental side effect.</p>
+            </div>
+
+            <div class="group-title">Core Documents</div>
+
+            <div class="panel">
+                <div class="panel-header">Canonical Documents</div>
+                <h2 class="panel-title">Primary</h2>
+                <ul>
+                    <li>
+                        <a href="function-document.html">Function Document</a>
+                        <span class="pill">Canonical</span>
+                    </li>
+                </ul>
+
+                <h2 class="panel-title" style="margin-top:16px;font-size:18px;">Supporting (Planned)</h2>
+                <ul>
+                    <li>Architecture Document</li>
+                    <li>Identity Integrity Specification</li>
+                    <li>Implementation Notes</li>
+                </ul>
+                <p class="muted">As these documents are created, each will be linked here and versioned explicitly.</p>
+            </div>
+
+            <div class="group-title">Purpose</div>
+
+            <div class="panel">
+                <div class="panel-header">Scope</div>
+                <h2 class="panel-title">Purpose of This Site</h2>
+                <p>This site houses the canonical documents, structures, and specifications of the ARCHONOMY discipline.</p>
+                <p class="muted">If a statement about ARCHONOMY is not traceable to this site or its referenced documents, it is not canonical.</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: LICENSES, CERTIFICATES, GOVERNANCE, REGISTRY -->
+        <div>
+
+            <div class="group-title">Licensing & Certification</div>
+
+            <div class="panel">
+                <div class="panel-header">Usage</div>
+                <h2 class="panel-title">Licenses</h2>
+                <p><strong>ARCHONOMY Framework License</strong> (placeholder)</p>
+                <p>Define here the terms under which ARCHONOMY may be implemented, referenced, or embedded into systems. This typically includes attribution, modification rules, and any commercial constraints.</p>
+                <p class="muted">When you have final license text, it can either live on its own page (e.g., <code>license.html</code>) or be inlined here.</p>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">Verification</div>
+                <h2 class="panel-title">Certificates</h2>
+                <p><strong>ARCHONOMY-Compliant Mechanism Certificate</strong> (placeholder)</p>
+                <p>Describe the criteria and process for issuing certificates to mechanisms or systems that satisfy ARCHONOMY’s identity integrity requirements.</p>
+                <p class="muted">Later, you can link to actual certificate templates or a registry of issued certificates.</p>
+            </div>
+
+            <div class="group-title">Governance</div>
+
+            <div class="panel">
+                <div class="panel-header">Stewardship</div>
+                <h2 class="panel-title">Governance</h2>
+                <p><strong>Canonical Steward:</strong> (your name or entity)</p>
+                <p>Define who maintains the canonical specification, how revisions are approved, and how breaking changes are handled.</p>
+                <p class="muted">You can later move this into a dedicated <code>governance.html</code> page if it grows.</p>
+            </div>
+
+            <div class="group-title">Registry</div>
+
+            <div class="panel">
+                <div class="panel-header">Records</div>
+                <h2 class="panel-title">Registry</h2>
+                <p>Describe how mechanisms, systems, or organizations may be recorded as ARCHONOMY-aligned or ARCHONOMY-compliant.</p>
+                <p class="muted">In the future, this can link to a machine-readable registry or a public listing page.</p>
+            </div>
+
+        </div>
+
     </div>
 
 </div>
