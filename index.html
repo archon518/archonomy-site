@@ -17,3 +17,117 @@
 
     /* GOLD TONE */
     :root {
+        --gold: #c8a96a;          /* burnished gold */
+        --gold-soft: #b8965a;     /* muted gold */
+        --gold-glow: rgba(200,169,106,0.18);
+    }
+
+    /* TOP NAV BAR */
+    .nav {
+        width: 100%;
+        padding: 18px 30px;
+        background: #0f0f0f;
+        border-bottom: 1px solid #1f1f1f;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: var(--gold);
+        text-transform: uppercase;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 110px 20px 90px;
+        text-align: center;
+        background: linear-gradient(180deg, #141414, #0a0a0a);
+        border-bottom: 1px solid #1b1b1b;
+        box-shadow: 0 0 40px var(--gold-glow);
+    }
+
+    h1 {
+        font-size: 60px;
+        margin: 0;
+        letter-spacing: 3px;
+        font-weight: 700;
+        color: var(--gold);
+        text-shadow: 0 0 12px rgba(200,169,106,0.25);
+    }
+
+    .tagline {
+        margin-top: 14px;
+        font-size: 22px;
+        color: #d4d4d4;
+    }
+
+    /* CONTENT WRAPPER */
+    .content {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        margin-top: 55px;
+        font-size: 26px;
+        color: var(--gold-soft);
+        border-left: 4px solid var(--gold);
+        padding-left: 14px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 12px;
+        color: #dcdcdc;
+    }
+
+    a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--gold-soft);
+    }
+
+    ul {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">ARCHONOMY</div>
+
+<div class="hero">
+    <h1>ARCHONOMY</h1>
+    <p class="tagline"><strong>The Discipline of Identity Integrity</strong></p>
+</div>
+
+<div class="content">
+
+    <h2>What ARCHONOMY Is</h2>
+    <p>ARCHONOMY is the discipline that restores, stabilizes, and protects mechanisms — ensuring they remain themselves across time, operators, and conditions.</p>
+
+    <h2>Core Documents</h2>
+    <ul>
+        <li><a href="function-document.html">Function Document</a></li>
+    </ul>
+
+    <h2>Purpose of This Site</h2>
+    <p>This site houses the canonical documents, structures, and specifications of the ARCHONOMY discipline.</p>
+
+</div>
+
+</body>
+</html>
