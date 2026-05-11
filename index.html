@@ -10,36 +10,122 @@
         margin: 0;
         padding: 0;
         background: #0b0b0b;
-        color: #e6e6e6;
+        color: #e8e8e8;
         font-family: Arial, sans-serif;
         line-height: 1.7;
     }
 
     :root {
-        --gold: #c8a96a;
-        --gold-soft: #b8965a;
-        --gold-glow: rgba(200,169,106,0.18);
+        --gold: #c7a86a;
+        --gold-soft: #b9975a;
+        --panel: #111;
+        --panel-border: #1c1c1c;
     }
 
-    /* HEADER BAR */
-    .topbar {
-        width: 100%;
-        padding: 20px 30px;
-        background: #111;
-        border-bottom: 1px solid #1f1f1f;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: var(--gold);
-        text-transform: uppercase;
+    /* CENTERED WRAPPER */
+    .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 22px;
     }
 
-    /* HERO */
-    .hero {
-        padding: 80px 20px;
+    /* HEADER */
+    .header {
         text-align: center;
-        background: #141414;
-        box-shadow: 0 0 40px var(--gold-glow);
+        padding: 80px 20px 60px;
+        border-bottom: 1px solid var(--panel-border);
+        background: linear-gradient(180deg, #151515, #0b0b0b);
     }
 
-    .hero h1 {
+    .header h1 {
+        font-size: 56px;
+        margin: 0;
+        letter-spacing: 3px;
+        color: var(--gold);
+        font-weight: 700;
+    }
+
+    .header .tagline {
+        margin-top: 14px;
+        font-size: 22px;
+        color: #d0d0d0;
+    }
+
+    /* SECTION BLOCKS */
+    .section {
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        padding: 28px 30px;
+        margin-top: 40px;
+        border-radius: 6px;
+        box-shadow: 0 0 22px rgba(0,0,0,0.35);
+    }
+
+    .section h2 {
+        margin: 0 0 14px 0;
+        font-size: 24px;
+        color: var(--gold);
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .section p {
+        margin: 0;
+        font-size: 18px;
+        color: #dcdcdc;
+    }
+
+    /* LINKS */
+    a {
+        color: var(--gold);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--gold-soft);
+        text-decoration: underline;
+    }
+
+    ul {
+        margin: 10px 0 0 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>ARCHONOMY</h1>
+    <p class="tagline"><strong>The Discipline of Identity Integrity</strong></p>
+</div>
+
+<div class="wrapper">
+
+    <div class="section">
+        <h2>What ARCHONOMY Is</h2>
+        <p>ARCHONOMY is the discipline that restores, stabilizes, and protects mechanisms — ensuring they remain themselves across time, operators, and conditions.</p>
+    </div>
+
+    <div class="section">
+        <h2>Core Documents</h2>
+        <ul>
+            <li><a href="function-document.html">Function Document</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Purpose of This Site</h2>
+        <p>This site houses the canonical documents, structures, and specifications of the ARCHONOMY discipline.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
